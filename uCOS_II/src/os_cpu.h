@@ -130,17 +130,17 @@ OS_CPU_EXT  OS_STK  *OS_CPU_ExceptStkBase;
 *********************************************************************************************************
 */
 
-#if OS_CRITICAL_METHOD == 3u                      /* See OS_CPU_A.ASM                                  */
+#if OS_CRITICAL_METHOD == 3u
 __attribute__((naked)) OS_CPU_SR  OS_CPU_SR_Save(void);
 __attribute__((naked)) void       OS_CPU_SR_Restore(OS_CPU_SR cpu_sr);
 #endif
 
-__attribute__((naked)) void		OSCtxSw(void);
-__attribute__((naked)) void		OSIntCtxSw(void);
-__attribute__((naked)) void		OSStartHighRdy(void);
+__attribute__((naked)) void    OSCtxSw(void);
+__attribute__((naked)) void    OSIntCtxSw(void);
+__attribute__((naked)) void    OSStartHighRdy(void);
 
-__attribute__((naked)) void		__PendSV_Handler(void);/* QL was: void  OS_CPU_PendSVHandler   (void);       */
-                                                  /* See OS_CPU_C.C                                    */
+__attribute__((naked)) void    __PendSV_Handler(void);  /* void  OS_CPU_PendSVHandler   (void);       */
+                                                  
 
 int     sysTickHook(void);
 void    OS_CPU_SysTickInit(INT32U  cnts);
