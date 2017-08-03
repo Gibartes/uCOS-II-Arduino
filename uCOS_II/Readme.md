@@ -41,5 +41,5 @@ Revised by hongkyun
   
 # Install uCOS-II library for Ardunino IDE in Windows
 
-  Copy or unzip uCOS-II file to C:\Users\[Your ID]\Documents\Arduino\libraries
+  Copy or unzip uCOS-II file to C:\Users\\[Your ID]\Documents\Arduino\libraries
   
