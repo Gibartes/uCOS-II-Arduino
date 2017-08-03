@@ -28,3 +28,12 @@ This source code should be used just for education or research according to uC/O
 * OS_TASK_TMR_PRIO is defined as priority 15 in cf/oscfg.h
 
 Revised by hongkyun
+
+
+* Install an Ardunino IDE libaray in Windows
+  Copy or unzip uCOS-II file to Documents\Arduino\libraries
+  
+* Install an Ardunino IDE libaray in Linux
+  Copy or unzip uCOS-II file to ~/Arduino/libraries 
+  or type
+  bash uCOS_II/install.sh
