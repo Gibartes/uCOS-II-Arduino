@@ -5,6 +5,17 @@
 * Quantum Leaps, LLC. www.state-machine.com
 * 2015-03-23
 *===========================================================================*/
+
+/*============================================================================
+* Modified from the original to interoperate with Arduino boards as follows:
+* - renamed OS_CPU_SysTickHandler to sysTickHook
+* - integrated PendSVHandler
+* - converted functions in .asm format to .c format with __attribute__(naked) 
+* 
+* HongKyun, Gibartes.
+* 2017-08-04
+*===========================================================================*/
+
 /*
 *********************************************************************************************************
 *                                               uC/OS-II
