@@ -31,10 +31,6 @@ Revised by hongkyun
 
 *********************************************************************************************************
 
-# Install an Ardunino IDE libaray in Windows
-
-  Copy or unzip uCOS-II file to Documents\Arduino\libraries
-  
 # Install an Ardunino IDE libaray in Linux
 
   Copy or unzip uCOS-II file to ~/Arduino/libraries 
@@ -42,3 +38,8 @@ Revised by hongkyun
   or just type
   
   bash ${Unzip_Dir}/uCOS_II/install.sh
+  
+# Install an Ardunino IDE libaray in Windows
+
+  Copy or unzip uCOS-II file to C:\Users\{Your ID]\Documents\Arduino\libraries
+  
