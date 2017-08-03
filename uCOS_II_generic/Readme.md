@@ -21,7 +21,7 @@
  licensing fee.
 *********************************************************************************************************
 
-MicroC/OS for ARM Cortex M3 based arduino board like Arudino Due.
+Generic version of MicroC/OS for boards based on ARM Cortex M3
 This source code should be used just for education or research according to uC/OS-II's licensing terms.
 
 
@@ -30,16 +30,3 @@ This source code should be used just for education or research according to uC/O
 Revised by hongkyun
 
 *********************************************************************************************************
-
-# Install uCOS-II library for Ardunino IDE in Linux
-
-  Copy or unzip uCOS-II file to ~/Arduino/libraries 
-  
-  or just type
-  
-  bash ${Unzip_Dir}/uCOS_II/install.sh
-  
-# Install uCOS-II library for Ardunino IDE in Windows
-
-  Copy or unzip uCOS-II file to C:\Users\{Your ID]\Documents\Arduino\libraries
-  
