@@ -47,9 +47,10 @@
 #include "os_cpu.h"
 #include "ucos_ii.h"
 
+#ifdef ARDUINO_MODE
 extern void	tickReset(void);
 extern void	TimeTick_Increment(void);
-
+#endif
 /*
 *********************************************************************************************************
 *                                          LOCAL VARIABLES
@@ -186,11 +187,14 @@ __attribute__((naked)) void __PendSV_Handler(void){
         "BX      LR\n");
 }
 
-
+#ifdef ARDUINO_MODE
 void pendSVHook(void){
     __PendSV_Handler();	
 }
-
+#else
+void pendSV_Handler(void){
+    __PendSV_Handler();}
+#endif
 
 /*
 *********************************************************************************************************
@@ -500,7 +504,7 @@ void  OSTimeTickHook (void)
 * Note(s)    : 1) This function MUST be placed on entry 15 of the Cortex-M3 vector table.
 *********************************************************************************************************
 */
-
+#ifdef ARDUINO_MODE
 int  sysTickHook(void)  /* QL was: void  OS_CPU_SysTickHandler (void) */
 {
     OS_CPU_SR  cpu_sr;
@@ -513,7 +517,20 @@ int  sysTickHook(void)  /* QL was: void  OS_CPU_SysTickHandler (void) */
     OSTimeTick();                                /* Call uC/OS-II's OSTimeTick()                       */
     OSIntExit();                                 /* Tell uC/OS-II that we are leaving the ISR          */
 }
+#else
+int  SysTickHandler(void)
+{
+    OS_CPU_SR  cpu_sr;
 
+    OS_ENTER_CRITICAL();                         /* Tell uC/OS-II that we are starting an ISR          */
+    OSIntNesting++;
+	tickReset();
+	TimeTick_Increment();						// Increment tick count each ms
+    OS_EXIT_CRITICAL();
+    OSTimeTick();                                /* Call uC/OS-II's OSTimeTick()                       */
+    OSIntExit();                                 /* Tell uC/OS-II that we are leaving the ISR          */
+}
+#endif
 /*
 *********************************************************************************************************
 *                                          INITIALIZE SYS TICK
