@@ -12,7 +12,7 @@
 * - integrated PendSVHandler
 * - converted functions in .asm format to .c format with __attribute__(naked) 
 * 
-* - No problem with Arduino IDE when build it
+* - No problem with Arduino IDE when build it 
 *
 * HongKyun, Gibartes.
 * 2017-08-04
