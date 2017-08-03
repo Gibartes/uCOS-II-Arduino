@@ -12,7 +12,7 @@ if [ $? -gt 0 ];then
 				exit 1
 			fi
 			break;;
-        * ) echo -e "Canceled.";;
+        	   * ) echo -e "Canceled.";;
 	esac
 	exit 0
 fi
