@@ -27,7 +27,6 @@
 
 #define OSINIT extern void
 
-#define ARDUINO_MODE		  1u   /* For Arudino */
 
                                        /* ---------------------- MISCELLANEOUS ----------------------- */
 #define OS_APP_HOOKS_EN           0u   /* Application-defined hooks are called from the uC/OS-II hooks */
