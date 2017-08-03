@@ -84,111 +84,111 @@ static  INT16U  OSTmrCtr;
 
 
 __attribute__((naked)) OS_CPU_SR OS_CPU_SR_Save(void){
-	__asm volatile(
-		"MRS     R0, PRIMASK\n"                         
-		"CPSID   I\n"
-		"BX      LR\n");
+    __asm volatile(
+        "MRS     R0, PRIMASK\n"                         
+        "CPSID   I\n"
+        "BX      LR\n");
 }
 
 __attribute__((naked)) void OS_CPU_SR_Restore(OS_CPU_SR cpu_sr){
-	__asm volatile(
-		"MSR     PRIMASK, R0\n"
-		"BX      LR\n");
+    __asm volatile(
+        "MSR     PRIMASK, R0\n"
+        "BX      LR\n");
 }
 
 __attribute__((naked)) void OSCtxSw(void){
-	__asm volatile(
-		"LDR     R0, =0xE000ED04\n"                 
-		"LDR     R1, =0x10000000\n"
-		"STR     R1, [R0]\n"
-		"BX      LR\n");
+    __asm volatile(
+        "LDR     R0, =0xE000ED04\n"                 
+        "LDR     R1, =0x10000000\n"
+        "STR     R1, [R0]\n"
+        "BX      LR\n");
 }
 
 __attribute__((naked)) void OSIntCtxSw(void){
-	__asm volatile(
-		"LDR     R0, =0xE000ED04\n"            
-    	"LDR     R1, =0x10000000\n"
-    	"STR     R1, [R0]\n"
-    	"BX      LR\n");
+    __asm volatile(
+        "LDR     R0, =0xE000ED04\n"            
+        "LDR     R1, =0x10000000\n"
+        "STR     R1, [R0]\n"
+        "BX      LR\n");
 }
 
 __attribute__((naked)) void OSStartHang(void){
-	__asm volatile("B 	OSStartHang\n");} 						            
+    __asm volatile("B 	OSStartHang\n");} 						            
 
 
 
 __attribute__((naked)) void OSStartHighRdy(void){
-	__asm volatile(
-		"LDR     R0, =0xE000ED22\n"                                  
-		"LDR     R1, =0xFF\n"
-		"STRB    R1, [R0]\n"
+    __asm volatile(
+        "LDR     R0, =0xE000ED22\n"                                  
+        "LDR     R1, =0xFF\n"
+        "STRB    R1, [R0]\n"
 
-		"LDR     R0, =OSRunning\n"                                      
-		"MOVS    R1, #1\n"
-		"STRB    R1, [R0]\n"
+        "LDR     R0, =OSRunning\n"                                      
+        "MOVS    R1, #1\n"
+        "STRB    R1, [R0]\n"
 
-		"LDR   	 R0, =OS_CPU_ExceptStkBase\n"
-		"LDR     R1, [R0]\n"
-		"MSR     MSP, R1\n"    
+        "LDR   	 R0, =OS_CPU_ExceptStkBase\n"
+        "LDR     R1, [R0]\n"
+        "MSR     MSP, R1\n"    
 
-		"LDR     R0, =OSPrioCur\n"
-		"LDR   	 R1, =OSPrioHighRdy\n"
-		"LDRB    R2, [R1]\n"
-		"STRB    R2, [R0]\n"
+        "LDR     R0, =OSPrioCur\n"
+        "LDR   	 R1, =OSPrioHighRdy\n"
+        "LDRB    R2, [R1]\n"
+        "STRB    R2, [R0]\n"
 
-		"LDR 	 R5, =OSTCBCur\n"
-		"LDR 	 R1, =OSTCBHighRdy\n"
-		"LDR     R2, [R1]\n"
-		"STR     R2, [R5]\n"
+        "LDR 	 R5, =OSTCBCur\n"
+        "LDR 	 R1, =OSTCBHighRdy\n"
+        "LDR     R2, [R1]\n"
+        "STR     R2, [R5]\n"
 
-		"LDR     R0, [R2]\n"
-		"MSR     PSP, R0\n"
+        "LDR     R0, [R2]\n"
+        "MSR     PSP, R0\n"
 
-		"MRS     R0, CONTROL\n"
-		"ORR     R0, R0, #2\n"
-		"MSR     CONTROL, R0\n"
-		"ISB\n"
+        "MRS     R0, CONTROL\n"
+        "ORR     R0, R0, #2\n"
+        "MSR     CONTROL, R0\n"
+        "ISB\n"
 
-		"LDMFD    SP!, {R4-R11}\n"
-		"LDMFD    SP!, {R0-R3}\n"
-		"LDMFD    SP!, {R12, LR}\n"
-		"LDMFD    SP!, {R1, R2}\n"
-		"CPSIE    I\n"
-		"BX       R1\n");
+        "LDMFD    SP!, {R4-R11}\n"
+        "LDMFD    SP!, {R0-R3}\n"
+        "LDMFD    SP!, {R12, LR}\n"
+        "LDMFD    SP!, {R1, R2}\n"
+        "CPSIE    I\n"
+        "BX       R1\n");
 }  
 
 __attribute__((naked)) void __PendSV_Handler(void){
-	__asm volatile(
-		"CPSID   I\n"
-		"MRS     R0, PSP\n"
-		"STMFD   R0!, {R4-R11}\n"
-		"LDR   	 R5, =OSTCBCur\n"
-		"LDR     R6, [R5]\n"
-		"STR     R0, [R6]\n"
+    __asm volatile(
+        "CPSID   I\n"
+        "MRS     R0, PSP\n"
+        "STMFD   R0!, {R4-R11}\n"
+        "LDR   	 R5, =OSTCBCur\n"
+        "LDR     R6, [R5]\n"
+        "STR     R0, [R6]\n"
 
-		"MOV     R4, LR\n"
-		"BL      OSTaskSwHook\n"
+        "MOV     R4, LR\n"
+        "BL      OSTaskSwHook\n"
 
-		"LDR   	 R0, =OSPrioCur\n"
-		"LDR   	 R1, =OSPrioHighRdy\n"
-		"LDRB    R2, [R1]\n"
-		"STRB    R2, [R0]\n"
+        "LDR   	 R0, =OSPrioCur\n"
+        "LDR   	 R1, =OSPrioHighRdy\n"
+        "LDRB    R2, [R1]\n"
+        "STRB    R2, [R0]\n"
 
-		"LDR   	 R1, =OSTCBHighRdy\n"
-		"LDR     R2, [R1]\n"
-		"STR     R2, [R5]\n"
+        "LDR   	 R1, =OSTCBHighRdy\n"
+        "LDR     R2, [R1]\n"
+        "STR     R2, [R5]\n"
 
-		"ORR     LR, R4, #0x04\n"
-		"LDR     R0, [R2]\n"
-		"LDMFD   R0!, {R4-R11}\n"
-		"MSR     PSP, R0\n"
-		"CPSIE   I\n"
-		"BX      LR\n");
+        "ORR     LR, R4, #0x04\n"
+        "LDR     R0, [R2]\n"
+        "LDMFD   R0!, {R4-R11}\n"
+        "MSR     PSP, R0\n"
+        "CPSIE   I\n"
+        "BX      LR\n");
 }
 
 
 void pendSVHook(void){
-	__PendSV_Handler();	
+    __PendSV_Handler();	
 }
 
 
