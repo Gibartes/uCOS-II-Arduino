@@ -21,7 +21,8 @@
  licensing fee.
 *********************************************************************************************************
 
-Generic version of MicroC/OS for boards based on ARM Cortex M3
+Generic version of MicroC/OS for boards based on ARM Cortex M3.
+
 This source code should be used just for education or research according to uC/OS-II's licensing terms.
 
 
