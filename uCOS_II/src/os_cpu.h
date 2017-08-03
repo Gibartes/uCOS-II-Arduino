@@ -143,5 +143,5 @@ __attribute__((naked)) void		__PendSV_Handler(void);/* QL was: void  OS_CPU_Pend
                                                   /* See OS_CPU_C.C                                    */
 
 int     sysTickHook(void);
-void		OS_CPU_SysTickInit(INT32U  cnts);
+void    OS_CPU_SysTickInit(INT32U  cnts);
 #endif
