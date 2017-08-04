@@ -46,3 +46,8 @@ Revised by hongkyun
   Copy or unzip uCOS-II file to C:\Users\\[Your ID]\Documents\Arduino\libraries
   
 
+# Usage
+
+  just include ucos_ii.h
+  
+  \#include <ucos_ii.h>
