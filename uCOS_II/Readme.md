@@ -26,7 +26,8 @@ This source code should be used just for education or research according to uC/O
 
 * OS_TASK_TMR_PRIO is defined as priority 15 in cf/oscfg.h
 
-Revised by hongkyun
+2017.08.04
+Revised by hongkyun 
 
 *********************************************************************************************************
 
