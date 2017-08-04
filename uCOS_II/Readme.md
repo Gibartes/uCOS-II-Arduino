@@ -1,5 +1,4 @@
 
-
 *********************************************************************************************************
 #                                                uC/OS-II
 #                                          The Real-Time Kernel
@@ -37,7 +36,7 @@ Revised by hongkyun
   
   Copy or unzip uCOS-II file to ~/Arduino/libraries 
   
-  or just copy below command type
+  or just copy or type below command
   
   cd uCOS-II-Arduino_Due-master/uCOS_II ; bash install.sh ; cd -
   
