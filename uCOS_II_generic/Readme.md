@@ -26,6 +26,6 @@ Generic version of MicroC/OS for boards based on ARM Cortex M3. This source code
 
 * OS_TASK_TMR_PRIO is defined as priority 15 in cf/oscfg.h
 
-Revised by hongkyun
+2017.08.04 Revised by HongKyun, Gibartes
 
 *********************************************************************************************************
