@@ -45,4 +45,3 @@ Revised by hongkyun
   Copy or unzip uCOS-II file to C:\Users\\[Your ID]\Documents\Arduino\libraries
   
 
-![Example](./led_blink.png)
