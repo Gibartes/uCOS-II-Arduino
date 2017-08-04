@@ -34,7 +34,7 @@ Revised by HongKyun, Gibartes
 
   git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git
   
-  Copy or unzip uCOS-II file to ~/Arduino/libraries 
+  Copy or unzip uCOS-II directory to ~/Arduino/libraries 
   
   or just copy or type below command
   
@@ -42,7 +42,7 @@ Revised by HongKyun, Gibartes
   
 # Install uCOS-II library for Ardunino IDE in Windows
 
-  Copy or unzip uCOS-II file to C:\Users\\[Your ID]\Documents\Arduino\libraries
+  Copy or unzip uCOS-II folder to C:\Users\\[Your ID]\Documents\Arduino\libraries
   
 
 # Usage
