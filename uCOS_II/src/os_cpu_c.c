@@ -8,6 +8,7 @@
 
 /*============================================================================
 * Modified from the original to interoperate with Arduino boards as follows:
+* - included os_cpu_a.asm file 
 * - renamed OS_CPU_SysTickHandler to sysTickHook
 * - integrated PendSVHandler
 * - converted functions in .asm format to .c format with __attribute__(naked) 
