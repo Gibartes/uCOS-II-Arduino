@@ -29,3 +29,9 @@ Generic version of MicroC/OS for boards based on ARM Cortex M3. This source code
 2017.08.04 Revised by HongKyun, Gibartes
 
 *********************************************************************************************************
+
+# Usage
+
+  just include ucos_ii.h
+  
+  \#include <ucos_ii.h>
