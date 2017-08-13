@@ -48,8 +48,7 @@ Revised by HongKyun, Gibartes
   cd uCOS-II-Arduino_Due/uCOS_II ; bash install.sh ; cd -
   
   
-  
-  
+    
 # Install uCOS-II library for Ardunino IDE in Windows
 
   Copy or unzip uCOS-II folder to C:\Users\\[Your ID]\Documents\Arduino\libraries
