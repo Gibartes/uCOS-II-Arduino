@@ -14,7 +14,7 @@ if [ -d ~/Arduino/libraries/uCOS_II ];then
 	esac
 	exit 0
 fi
-mkdir ~/Arduino/libraries/uCOS_II
+mkdir -p ~/Arduino/libraries/uCOS_II
 cp -rf * ~/Arduino/libraries/uCOS_II
 if [ $? -gt 0 ];then
 	echo -e "Failed to install uCOS_II library for Arduino."
