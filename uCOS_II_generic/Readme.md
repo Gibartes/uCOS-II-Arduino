@@ -21,7 +21,7 @@
  licensing fee.
 *********************************************************************************************************
 
-Generic version of MicroC/OS for boards based on ARM Cortex M3. This source code should be used just for education or research according to uC/OS-II's licensing terms.
+Generic version of MicroC/OS for boards based on ARM Cortex M3. This source code works without keil μVision. This should be used just for education or research according to uC/OS-II's licensing terms.
 
 
 * OS_TASK_TMR_PRIO is defined as priority 15 in cfg/oscfg.h
