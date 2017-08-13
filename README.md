@@ -8,4 +8,35 @@ Of course, you can use this source codes for other boards as downloading generic
 2017.08.04 Revised by HongKyun, Gibartes
 
 email : konm2000@hotmail.com
-**************************************************************
+
+*********************************************************************************************************
+
+# Install uCOS-II library for Ardunino IDE in Linux
+
+  git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git
+  
+  Copy or unzip uCOS-II directory to ~/Arduino/libraries 
+  
+  or type below command
+  
+  cd uCOS-II-Arduino_Due-master/uCOS_II ; bash install.sh ; cd -
+  
+  or just copy one line command as follows :
+  
+  git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git ;
+  cd uCOS-II-Arduino_Due/uCOS_II ; bash install.sh ; cd -
+  
+    
+  
+# Install uCOS-II library for Ardunino IDE in Windows
+
+  Copy or unzip uCOS-II folder to C:\Users\\[Your ID]\Documents\Arduino\libraries
+  
+
+# Usage
+
+  just include ucos_ii.h
+  
+  \#include <ucos_ii.h>
+
+*********************************************************************************************************
