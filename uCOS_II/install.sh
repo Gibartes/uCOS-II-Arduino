@@ -10,7 +10,7 @@ if [ -d ~/Arduino/libraries/uCOS_II ];then
 				echo -e "Failed to install uCOS_II library for Arduino."
 				exit 1
 			fi
-			break;;
+			;;
         	   * ) echo -e "Canceled.";;
 	esac
 	exit 0
