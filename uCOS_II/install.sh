@@ -1,14 +1,14 @@
 #!/bin/bash
 
 LPATH=~/Arduino/libraries/uCOS_II
-echo -e "Installing uCOS-II libraries..."
+echo -e "Installing uCOS-II library..."
 if [ -d ${LPATH} ];then
-	read -p  "Are you sure to overwrite uCOS_II? [y/n]" yn
+	read -p  "Are you sure to overwrite uCOS-II? [y/n]" yn
 	case $yn in
 		[Yy]* ) 
 			cp -rf * ${LPATH}
 			if [ $? -gt 0 ];then
-				echo -e "Failed to install uCOS_II library for Arduino."
+				echo -e "Failed to install uCOS-II library for Arduino."
 				exit 1
 			fi;;
         	   * ) echo -e "Canceled.";;
@@ -18,7 +18,7 @@ fi
 mkdir -p ${LPATH}
 cp -rf * ${LPATH}
 if [ $? -gt 0 ];then
-	echo -e "Failed to install uCOS_II library for Arduino."
+	echo -e "Failed to install uCOS-II library for Arduino."
 	exit 1
 fi
 echo -e "Successfully installed."
