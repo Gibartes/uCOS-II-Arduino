@@ -57,7 +57,7 @@ Revised by HongKyun, Gibartes
 
 # Usage
 
-  just include ucos_ii.h
+  Just include ucos_ii.h
   
   \#include <ucos_ii.h>
 
