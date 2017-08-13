@@ -14,7 +14,7 @@ email : konm2000@hotmail.com
 # Install uCOS-II library for Ardunino IDE in Linux
 
    
-  Method 1)
+* Method 1)
   
   Download file and unzip uCOS-II directory to ~/Arduino/libraries 
   
@@ -22,9 +22,9 @@ email : konm2000@hotmail.com
   
   cd uCOS-II-Arduino_Due-master/uCOS_II ; bash install.sh ; cd -
   
-  Method 2)
+* Method 2)
   
-  just copy one line command as follows :
+  Just copy one line command as follows :
   
   git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git ;
   cd uCOS-II-Arduino_Due/uCOS_II ; bash install.sh ; cd -
@@ -38,7 +38,7 @@ email : konm2000@hotmail.com
 
 # Usage
 
-  just include ucos_ii.h
+  Just include ucos_ii.h
   
   \#include <ucos_ii.h>
 
