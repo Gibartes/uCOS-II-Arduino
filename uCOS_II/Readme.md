@@ -42,7 +42,7 @@ Revised by HongKyun, Gibartes
   
 * Method 2)
   
-  just copy one line command as follows :
+  Just copy one line command as follows :
   
   git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git ;
   cd uCOS-II-Arduino_Due/uCOS_II ; bash install.sh ; cd -
