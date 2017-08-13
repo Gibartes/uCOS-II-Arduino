@@ -36,11 +36,17 @@ Revised by HongKyun, Gibartes
   
   Copy or unzip uCOS-II directory to ~/Arduino/libraries 
   
-  or just copy or type below command
-  
-  git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git
+  or type below command
   
   cd uCOS-II-Arduino_Due-master/uCOS_II ; bash install.sh ; cd -
+  
+  or just copy one line command as follows :
+  
+  git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git ;
+  cd uCOS-II-Arduino_Due/uCOS_II ; bash install.sh ; cd -
+  
+  
+  
   
 # Install uCOS-II library for Ardunino IDE in Windows
 
