@@ -39,6 +39,7 @@ Revised by HongKyun, Gibartes
   or just copy or type below command
   
   git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git
+  
   cd uCOS-II-Arduino_Due-master/uCOS_II ; bash install.sh ; cd -
   
 # Install uCOS-II library for Ardunino IDE in Windows
