@@ -2,7 +2,7 @@
 
 echo -e "Installing uCOS-II libraries..."
 mkdir ~/Arduino/libraries/uCOS_II
-if [ $? -gt 0 ];then
+if [ -d ~/Arduino/libraries/uCOS_II ];then
 	read -p  "Are you sure to overwrite uCOS_II? [y/n]" yn
 	case $yn in
 		[Yy]* ) 
