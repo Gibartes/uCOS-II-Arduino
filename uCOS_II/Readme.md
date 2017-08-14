@@ -38,14 +38,14 @@ Revised by HongKyun, Gibartes
   
   or type below command unless downloaded file with git-clone
   
-  cd uCOS-II-Arduino_Due-master/uCOS_II ; bash install.sh ; cd -
+  cd uCOS-II-Arduino-master/uCOS_II ; bash install.sh ; cd -
   
 * Method 2)
   
   Just copy one line command as follows :
   
-  git clone https://github.com/Gibartes/uCOS-II-Arduino_Due.git ;
-  cd uCOS-II-Arduino_Due/uCOS_II ; bash install.sh ; cd -
+  git clone https://github.com/Gibartes/uCOS-II-Arduino.git ;
+  cd uCOS-II-Arduino/uCOS_II ; bash install.sh ; cd -
   
   
     
