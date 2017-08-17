@@ -47,7 +47,7 @@
 */
 
 #define  OS_CPU_GLOBALS
-#include "os_cpu.h"
+#include "cpu/os_cpu.h"
 #include "ucos_ii.h"
 
 
