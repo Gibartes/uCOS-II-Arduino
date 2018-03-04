@@ -29,7 +29,8 @@ email : konm2000@hotmail.com
   git clone https://github.com/Gibartes/uCOS-II-Arduino.git ;
   cd uCOS-II-Arduino/uCOS_II ; bash install.sh ; cd -
   
-    
+* Method 3)
+  Use Arduino library manager.
   
 # Install uCOS-II library for Ardunino IDE in Windows
 
