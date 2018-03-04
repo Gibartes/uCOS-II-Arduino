@@ -37,9 +37,7 @@ email : konm2000@hotmail.com
   
 
 # Usage
-
-  Just include ucos_ii.h
-  
+ 
    Just include ucos_ii.h. An example is as follows.
   
     #include <ucos_ii.h>
